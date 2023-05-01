@@ -1,0 +1,112 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-font: "Poppins", sans-serif;
+}
+body {
+  font-family: var(--primary-font);
+}
+.todo-container {
+  padding-top: 30px;
+  .alert-box {
+    padding: 10px;
+    border: 1px solid green;
+    background: #23cc23;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 8px;
+    width: 400px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+  .header {
+    font-size: 45px;
+    text-align: center;
+  }
+  .todo-form {
+    margin: 24px;
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 16px;
+    }
+    .add-task-field {
+      padding: 10px 14px;
+      border-radius: 6px;
+      border: 1px solid gray;
+      font-size: 16px;
+      width: 100%;
+      display: block;
+    }
+    .add-task-btn {
+      margin-top: 14px;
+      padding: 10px 16px;
+      font-size: 16px;
+      font-weight: 500;
+      border: 1px solid blue;
+      border-radius: 8px;
+      background: blue;
+      color: white;
+      width: 100%;
+    }
+  }
+  .task-list-container {
+    margin: 40px 24px;
+    .task-list-header {
+      font-size: 20px;
+    }
+    .task-list {
+      margin-top: 20px;
+      .task-item {
+        display: flex;
+        padding: 10px 14px;
+        border: 1px solid blue;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 6px;
+        margin-bottom: 10px;
+        &.completed-task {
+          background: #0000ff40;
+          .task-name {
+            text-decoration: line-through;
+          }
+        }
+        .task-name {
+          font-size: 16px;
+          font-weight: 500;
+        }
+        .task-item-btn {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          .delete-btn {
+            padding: 4px 6px;
+            background: red;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            cursor: pointer;
+          }
+          .text-btn {
+            border: none;
+            color: green;
+            background: transparent;
+            text-decoration: underline;
+            font-weight: 600;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
