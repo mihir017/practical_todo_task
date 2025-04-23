@@ -18,6 +18,11 @@ const TodoApp = () => {
       value: "Answer Email",
       completed: true,
     },
+    {
+      id: 4,
+      value: "Learn English Grammar",
+      completed: true,
+    },
   ];
   const [task, setTask] = useState("");
   const [taskList, setTaskList] = useState(initialTask);
